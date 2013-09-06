@@ -101,7 +101,7 @@ Private Sub Command3_Click()
 con.Open
 List1.AddItem Now & " - Shrinking started...", 0
 DoEvents
-cmd.CommandTimeout = 3000
+cmd.CommandTimeout = 4000
 Set cmd.ActiveConnection = con
 cmd.CommandText = "DBCC SHRINKDATABASE  ('" & con.DefaultDatabase & "' ) WITH  NO_INFOMSGS"
 cmd.Execute
